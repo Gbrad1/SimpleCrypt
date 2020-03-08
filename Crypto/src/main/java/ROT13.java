@@ -1,12 +1,6 @@
-import java.util.logging.Logger;
 
-import static java.lang.Character.isLowerCase;
-import static java.lang.Character.isUpperCase;
-import static java.lang.Character.toLowerCase;
 
 public class ROT13  {
-
-    private static final Logger LOGGER = Logger.getLogger(ROT13.class.getName());
 
     int difference;
 
@@ -66,7 +60,7 @@ public class ROT13  {
         for (int i = 0; i < s.length(); i++) {
             if (i < distanceFromA) {
                 toReturn[i] = charArray[i + distanceFromA];
-            } else if (i >= distanceFromA) {
+            } else {
                 toReturn[i] = charArray[i - distanceFromA];
             }
         }
